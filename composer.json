@@ -1,0 +1,15 @@
+{
+    "name": "archin/bank2loyalty-api-php",
+    "description": "Bank2Loyalty API client library for PHP.",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Bank2Loyalty\\": "src"
+        }
+    },
+    "require": {
+        "ext-json": "*",
+        "elao/enum": "^1.14",
+        "vlucas/phpdotenv": "^5.3"
+    }
+}
