@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpExample\Security;
+namespace Bank2Loyalty\Security;
 
 use Exception;
 

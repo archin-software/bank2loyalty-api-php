@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpExample\Models\PosIntegration;
+namespace Bank2Loyalty\Models\PosIntegration;
 
 class PosTxnProgram
 {

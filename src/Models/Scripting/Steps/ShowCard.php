@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpExample\Models\Scripting\Steps;
+namespace Bank2Loyalty\Models\Scripting\Steps;
 
-use PhpExample\Models\Enums\FrameMode;
-use PhpExample\Models\Scripting\ScriptAction;
+use Bank2Loyalty\Models\Enums\FrameMode;
+use Bank2Loyalty\Models\Scripting\ScriptAction;
 
 class ShowCard extends BaseStep
 {

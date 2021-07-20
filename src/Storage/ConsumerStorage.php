@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpExample\Storage;
+namespace Bank2Loyalty\Storage;
 
 class ConsumerStorage
 {

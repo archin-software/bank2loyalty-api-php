@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpExample\Models\Scripting\Steps;
+namespace Bank2Loyalty\Models\Scripting\Steps;
 
-use PhpExample\Models\Scripting\MenuButton;
+use Bank2Loyalty\Models\Scripting\MenuButton;
 
 class ShowMenu extends BaseStep
 {

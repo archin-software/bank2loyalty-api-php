@@ -1,7 +1,9 @@
 {
     "name": "archin/bank2loyalty-api-php",
     "description": "Bank2Loyalty API client library for PHP.",
-    "type": "project",
+    "keywords": ["bank2loyalty", "api"],
+    "type": "library",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Bank2Loyalty\\": "src"

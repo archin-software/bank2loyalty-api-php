@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpExample\Models\Scripting;
+namespace Bank2Loyalty\Models\Scripting;
 
-use PhpExample\Models\Enums\CardNumberActions;
+use Bank2Loyalty\Models\Enums\CardNumberActions;
 
 class CardNumberInfo extends BaseModel
 {

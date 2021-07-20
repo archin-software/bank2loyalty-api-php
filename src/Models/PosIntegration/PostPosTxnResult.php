@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpExample\Models\PosIntegration;
+namespace Bank2Loyalty\Models\PosIntegration;
 
-use PhpExample\Models\Data\ShoppingCartItem;
+use Bank2Loyalty\Models\Data\ShoppingCartItem;
 
 class PostPosTxnResult
 {

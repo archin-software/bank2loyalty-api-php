@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpExample\Models\Enums;
+namespace Bank2Loyalty\Models\Enums;
 
 use Elao\Enum\FlaggedEnum;
 

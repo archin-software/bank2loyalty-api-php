@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpExample\Models\Scripting\Steps;
+namespace Bank2Loyalty\Models\Scripting\Steps;
 
-use PhpExample\Models\Enums\ScanTypes;
+use Bank2Loyalty\Models\Enums\ScanTypes;
 
 class ShowOpticalScan extends BaseStep
 {

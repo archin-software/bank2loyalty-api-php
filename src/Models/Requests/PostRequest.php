@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpExample\Models\Requests;
+namespace Bank2Loyalty\Models\Requests;
 
-use PhpExample\Models\Data\ConsumerData;
-use PhpExample\Models\Enums\ScannedCodes;
+use Bank2Loyalty\Models\Data\ConsumerData;
+use Bank2Loyalty\Models\Enums\ScannedCodes;
 
 class PostRequest extends BaseRequest
 {

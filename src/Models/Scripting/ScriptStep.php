@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpExample\Models\Scripting;
+namespace Bank2Loyalty\Models\Scripting;
 
-use PhpExample\Models\Scripting\Steps\ShowCard;
-use PhpExample\Models\Scripting\Steps\ShowMenu;
-use PhpExample\Models\Scripting\Steps\ShowMessage;
-use PhpExample\Models\Scripting\Steps\ShowOpticalScan;
-use PhpExample\Models\Scripting\Steps\ShowYesNoQuestion;
+use Bank2Loyalty\Models\Scripting\Steps\ShowCard;
+use Bank2Loyalty\Models\Scripting\Steps\ShowMenu;
+use Bank2Loyalty\Models\Scripting\Steps\ShowMessage;
+use Bank2Loyalty\Models\Scripting\Steps\ShowOpticalScan;
+use Bank2Loyalty\Models\Scripting\Steps\ShowYesNoQuestion;
 
 class ScriptStep extends BaseModel
 {

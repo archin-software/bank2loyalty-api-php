@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpExample\Models\Requests;
+namespace Bank2Loyalty\Models\Requests;
 
-use PhpExample\Models\Data\ShoppingCartItem;
-use PhpExample\Models\Enums\ScannedCodes;
+use Bank2Loyalty\Models\Data\ShoppingCartItem;
+use Bank2Loyalty\Models\Enums\ScannedCodes;
 
 class PostPosTransaction extends BaseRequest
 {

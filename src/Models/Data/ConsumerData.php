@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpExample\Models\Data;
+namespace Bank2Loyalty\Models\Data;
 
 use DateTime;
 

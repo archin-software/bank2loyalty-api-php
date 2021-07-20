@@ -1,6 +1,10 @@
 <?php
 
-include_once __DIR__ . '/vendor/autoload.php';
+namespace Bank2Loyalty;
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+use Dotenv\Dotenv;
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+$dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();

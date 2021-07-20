@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpExample\Models\Requests;
+namespace Bank2Loyalty\Models\Requests;
 
-use PhpExample\Models\Scripting\ScriptActionResults;
+use Bank2Loyalty\Models\Scripting\ScriptActionResults;
 
 class PostScriptResult extends PostRequest
 {

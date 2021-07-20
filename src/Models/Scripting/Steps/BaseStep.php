@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpExample\Models\Scripting\Steps;
+namespace Bank2Loyalty\Models\Scripting\Steps;
 
-use PhpExample\Models\Scripting\BaseModel;
-use PhpExample\Models\Scripting\CardNumberInfo;
-use PhpExample\Models\Scripting\ScriptAction;
+use Bank2Loyalty\Models\Scripting\BaseModel;
+use Bank2Loyalty\Models\Scripting\CardNumberInfo;
+use Bank2Loyalty\Models\Scripting\ScriptAction;
 
 abstract class BaseStep extends BaseModel
 {

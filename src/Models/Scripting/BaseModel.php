@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpExample\Models\Scripting;
+namespace Bank2Loyalty\Models\Scripting;
 
 use JsonSerializable;
 

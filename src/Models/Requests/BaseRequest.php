@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpExample\Models\Requests;
+namespace Bank2Loyalty\Models\Requests;
 
 abstract class BaseRequest
 {
