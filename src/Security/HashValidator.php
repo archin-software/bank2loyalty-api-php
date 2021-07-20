@@ -2,9 +2,6 @@
 
 namespace Bank2Loyalty\Security;
 
-use Exception;
-
-
 class HashValidator
 {
     /**
@@ -14,7 +11,6 @@ class HashValidator
      * @param ?string $hashPassword
      *
      * @return bool
-     * @throws Exception
      */
     public static function validate(?string $body, ?string $hashPassword)
     {
