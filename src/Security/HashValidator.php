@@ -11,10 +11,12 @@ class HashValidator
      * Validate the hash of the request based on the body
      *
      * @param ?string $body
+     * @param ?string $hashPassword
+     *
      * @return bool
      * @throws Exception
      */
-    public static function validate(?string $body)
+    public static function validate(?string $body, ?string $hashPassword)
     {
         // Sent hash
         if (!isset($_SERVER['HTTP_HASH'])) {
@@ -22,11 +24,6 @@ class HashValidator
         }
 
         $hash = $_SERVER['HTTP_HASH'];
-
-        $hashPassword = getenv('HASH_PASSWORD');
-        if (!$hashPassword) {
-            throw new Exception('Please setup your hash password');
-        }
 
         // Calculate own hash
         $ownHash = hash('sha512', $hashPassword . $body);
