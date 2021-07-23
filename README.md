@@ -6,4 +6,6 @@
 
 ## Getting started ##
 
-Check out our [example project](https://github.com/archin-software/bank2loyalty-api-example-php) to get started immediately.
+- Check out our [example project](https://github.com/archin-software/bank2loyalty-api-example-php) to get started immediately.
+
+- Want to know more in-depth about Bank2Loyalty? Read the [developer documentation](https://developer.bank2loyalty.com/#document-history)
