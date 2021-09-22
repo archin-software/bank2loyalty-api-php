@@ -41,6 +41,12 @@ class ScriptStep extends BaseModel
     protected ?ShowOpticalScan $showOpticalScan = null;
 
     /**
+     * Just perform this (script)action
+     * @var ScriptAction|null
+     */
+    protected ?ScriptAction $scriptAction = null;
+
+    /**
      * @return ShowCard|null
      */
     public function getShowCard(): ?ShowCard
@@ -127,6 +133,24 @@ class ScriptStep extends BaseModel
     public function setShowOpticalScan(?ShowOpticalScan $showOpticalScan): ScriptStep
     {
         $this->showOpticalScan = $showOpticalScan;
+        return $this;
+    }
+
+    /**
+     * @return ScriptAction|null
+     */
+    public function getScriptAction(): ?ScriptAction
+    {
+        return $this->scriptAction;
+    }
+
+    /**
+     * @param ScriptAction|null $scriptAction
+     * @return ScriptStep
+     */
+    public function setScriptAction(?ScriptAction $scriptAction): ScriptStep
+    {
+        $this->scriptAction = $scriptAction;
         return $this;
     }
 }
