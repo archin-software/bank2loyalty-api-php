@@ -20,6 +20,18 @@ class ShowOpticalScan extends BaseStep
     protected int $scanType;
 
     /**
+     * override the standard keystring name "scannedData" with this string
+     * @var string|null
+     */
+    protected ?string $keyStringScannedDataOverride;
+
+    /**
+     * override the standard keystring name "scannedCode" with this string
+     * @var string|null
+     */
+    protected ?string $keyStringScannedCodeOverride;
+
+    /**
      * @return string
      */
     public function getScanInstruction(): string
@@ -52,6 +64,42 @@ class ShowOpticalScan extends BaseStep
     public function setScanType(int $scanType): ShowOpticalScan
     {
         $this->scanType = $scanType;
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getKeyStringScannedDataOverride(): ?string
+    {
+        return $this->keyStringScannedDataOverride;
+    }
+
+    /**
+     * @param string|null $keyStringScannedDataOverride
+     * @return ShowOpticalScan
+     */
+    public function setKeyStringScannedDataOverride(?string $keyStringScannedDataOverride): ShowOpticalScan
+    {
+        $this->keyStringScannedDataOverride = $keyStringScannedDataOverride;
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getKeyStringScannedCodeOverride(): ?string
+    {
+        return $this->keyStringScannedCodeOverride;
+    }
+
+    /**
+     * @param string|null $keyStringScannedCodeOverride
+     * @return ShowOpticalScan
+     */
+    public function setKeyStringScannedCodeOverride(?string $keyStringScannedCodeOverride): ShowOpticalScan
+    {
+        $this->keyStringScannedCodeOverride = $keyStringScannedCodeOverride;
         return $this;
     }
 }
