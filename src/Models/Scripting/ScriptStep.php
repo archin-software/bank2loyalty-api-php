@@ -3,6 +3,7 @@
 namespace Bank2Loyalty\Models\Scripting;
 
 use Bank2Loyalty\Models\Scripting\Steps\ShowCard;
+use Bank2Loyalty\Models\Scripting\Steps\ShowEnterAmount;
 use Bank2Loyalty\Models\Scripting\Steps\ShowMenu;
 use Bank2Loyalty\Models\Scripting\Steps\ShowMessage;
 use Bank2Loyalty\Models\Scripting\Steps\ShowOpticalScan;
@@ -39,6 +40,12 @@ class ScriptStep extends BaseModel
      * @var ShowOpticalScan|null
      */
     protected ?ShowOpticalScan $showOpticalScan = null;
+
+    /**
+     * Show a screen to enter an amount
+     * @var ShowEnterAmount|null
+     */
+    protected ?ShowEnterAmount $showEnterAmount = null;
 
     /**
      * Just perform this (script)action
@@ -133,6 +140,24 @@ class ScriptStep extends BaseModel
     public function setShowOpticalScan(?ShowOpticalScan $showOpticalScan): ScriptStep
     {
         $this->showOpticalScan = $showOpticalScan;
+        return $this;
+    }
+
+    /**
+     * @return ShowEnterAmount|null
+     */
+    public function getShowEnterAmount(): ?ShowEnterAmount
+    {
+        return $this->showEnterAmount;
+    }
+
+    /**
+     * @param ShowEnterAmount|null $showEnterAmount
+     * @return ScriptStep
+     */
+    public function setShowEnterAmount(?ShowEnterAmount $showEnterAmount): ScriptStep
+    {
+        $this->showEnterAmount = $showEnterAmount;
         return $this;
     }
 
