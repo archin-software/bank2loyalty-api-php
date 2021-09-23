@@ -28,7 +28,7 @@ class ShowEnterAmount extends BaseStep
      * stringlength must be 1. The character to be used as the decimal delimiter typical "," or "."
      * @var string
      */
-    protected string $decimalChar;
+    protected string $decimalCharacter;
 
     /**
      * the minimum amount that must be entered.
@@ -126,18 +126,18 @@ class ShowEnterAmount extends BaseStep
     /**
      * @return string
      */
-    public function getDecimalChar(): string
+    public function getDecimalCharacter(): string
     {
-        return $this->decimalChar;
+        return $this->decimalCharacter;
     }
 
     /**
-     * @param string $decimalChar
+     * @param string $decimalCharacter
      * @return ShowEnterAmount
      */
-    public function setDecimalChar(string $decimalChar): ShowEnterAmount
+    public function setDecimalCharacter(string $decimalCharacter): ShowEnterAmount
     {
-        $this->decimalChar = $decimalChar;
+        $this->decimalCharacter = $decimalCharacter;
         return $this;
     }
 
