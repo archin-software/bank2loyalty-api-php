@@ -94,11 +94,22 @@ class PostRequest extends BaseRequest
     protected ?ConsumerData $consumerData = null;
 
     /**
-     * Optional cardnumber you have supplied to store for the consumer
-     * @var string|null
+     * Preferred languages of the bankcard
+     * @var string[]
      */
-    protected ?string $cardNumber = null;
+    protected array $cardPreferredLanguages = [];
 
+    /**
+     * Optional list of programCardNumbers you have supplied to store for the consumer
+     * @var string[]
+     */
+    protected array $programCardNumbers = [];
+
+    /**
+     * isoCountry where the bankcard was produced
+     * @var string
+     */
+    protected string $cardIsoCountry;
 
     /**
      * @return string
@@ -353,20 +364,56 @@ class PostRequest extends BaseRequest
     }
 
     /**
-     * @return string|null
+     * @return string[]
      */
-    public function getCardNumber(): ?string
+    public function getCardPreferredLanguages(): array
     {
-        return $this->cardNumber;
+        return $this->cardPreferredLanguages;
     }
 
     /**
-     * @param string|null $cardNumber
+     * @param string[] $cardPreferredLanguages
      * @return PostRequest
      */
-    public function setCardNumber(?string $cardNumber): PostRequest
+    public function setCardPreferredLanguages(array $cardPreferredLanguages): PostRequest
     {
-        $this->cardNumber = $cardNumber;
+        $this->cardPreferredLanguages = $cardPreferredLanguages;
+        return $this;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getProgramCardNumbers(): array
+    {
+        return $this->programCardNumbers;
+    }
+
+    /**
+     * @param string[] $programCardNumbers
+     * @return PostRequest
+     */
+    public function setProgramCardNumbers(array $programCardNumbers): PostRequest
+    {
+        $this->programCardNumbers = $programCardNumbers;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCardIsoCountry(): string
+    {
+        return $this->cardIsoCountry;
+    }
+
+    /**
+     * @param string $cardIsoCountry
+     * @return PostRequest
+     */
+    public function setCardIsoCountry(string $cardIsoCountry): PostRequest
+    {
+        $this->cardIsoCountry = $cardIsoCountry;
         return $this;
     }
 }

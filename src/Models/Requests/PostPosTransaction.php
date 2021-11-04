@@ -69,10 +69,10 @@ class PostPosTransaction extends BaseRequest
     protected ?string $scannedData = null;
 
     /**
-     * if a card number is stored with this program for this consumer, it is filled
-     * @var string
+     * Optional list of programCardNumbers you have supplied to store for the consumer
+     * @var string[]
      */
-    protected string $cardNumber;
+    protected array $programCardNumbers = [];
 
     /**
      * transaction number B2L
@@ -291,20 +291,20 @@ class PostPosTransaction extends BaseRequest
     }
 
     /**
-     * @return string
+     * @return string[]
      */
-    public function getCardNumber(): string
+    public function getProgramCardNumbers(): array
     {
-        return $this->cardNumber;
+        return $this->programCardNumbers;
     }
 
     /**
-     * @param string $cardNumber
+     * @param string[] $programCardNumbers
      * @return PostPosTransaction
      */
-    public function setCardNumber(string $cardNumber): PostPosTransaction
+    public function setProgramCardNumbers(array $programCardNumbers): PostPosTransaction
     {
-        $this->cardNumber = $cardNumber;
+        $this->programCardNumbers = $programCardNumbers;
         return $this;
     }
 
