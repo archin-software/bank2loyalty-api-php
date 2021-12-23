@@ -7,19 +7,19 @@ use Bank2Loyalty\Models\Scripting\ScriptAction;
 class GraphInfo
 {
     /**
-     * The imagekey of the graphic image to show.
+     * The imagekey of the graphic image to show
      * @var string
      */
     protected string $imageKey;
 
     /**
-     * The text to show in the bottom center of the image.
+     * The text to show in the bottom center of the image
      * @var string|null
      */
     protected ?string $imageLabelText = null;
 
     /**
-     * The text to show in the select button below the image.
+     * The text to show in the select button below the image
      * @var string
      */
     protected string $buttonText;
