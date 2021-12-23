@@ -28,7 +28,7 @@ class ShowGraphicsMenu extends BaseStep
      * The list of graphical elements to show as menu choices
      * @var GraphInfo[]
      */
-    protected array $graphList;
+    protected array $graphList = [];
 
     /**
      * @return ScriptAction|null
