@@ -25,7 +25,7 @@ class ShowGraphicsMenu extends BaseStep
     protected int $initialImageIndex;
 
     /**
-     * The page number to show when the menu is started
+     * The list of graphical elements to show as menu choices
      * @var GraphInfo[]
      */
     protected array $graphList;
