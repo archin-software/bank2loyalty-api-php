@@ -5,6 +5,7 @@ namespace Bank2Loyalty\Models\Scripting;
 use Bank2Loyalty\Models\Scripting\Steps\ShowCard;
 use Bank2Loyalty\Models\Scripting\Steps\ShowEnterAmount;
 use Bank2Loyalty\Models\Scripting\Steps\ShowEnterPin;
+use Bank2Loyalty\Models\Scripting\Steps\ShowGraphicsMenu;
 use Bank2Loyalty\Models\Scripting\Steps\ShowMenu;
 use Bank2Loyalty\Models\Scripting\Steps\ShowMessage;
 use Bank2Loyalty\Models\Scripting\Steps\ShowOpticalScan;
@@ -53,6 +54,12 @@ class ScriptStep extends BaseModel
      * @var ShowEnterPin|null
      */
     protected ?ShowEnterPin $showEnterPin = null;
+
+    /**
+     * Show a graphical menu
+     * @var ShowGraphicsMenu|null
+     */
+    protected ?ShowGraphicsMenu $showGraphicsMenu = null;
 
     /**
      * Just perform this (script)action
@@ -183,6 +190,24 @@ class ScriptStep extends BaseModel
     public function setShowEnterPin(?ShowEnterPin $showEnterPin): ScriptStep
     {
         $this->showEnterPin = $showEnterPin;
+        return $this;
+    }
+
+    /**
+     * @return ShowGraphicsMenu|null
+     */
+    public function getShowGraphicsMenu(): ?ShowGraphicsMenu
+    {
+        return $this->showGraphicsMenu;
+    }
+
+    /**
+     * @param ShowGraphicsMenu|null $showGraphicsMenu
+     * @return ScriptStep
+     */
+    public function setShowGraphicsMenu(?ShowGraphicsMenu $showGraphicsMenu): ScriptStep
+    {
+        $this->showGraphicsMenu = $showGraphicsMenu;
         return $this;
     }
 
