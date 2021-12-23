@@ -4,7 +4,7 @@ namespace Bank2Loyalty\Models\Scripting\Steps;
 
 use Bank2Loyalty\Models\Scripting\ScriptAction;
 
-class GraphInfo extends BaseStep
+class GraphInfo
 {
     /**
      * The imagekey of the graphic image to show.
