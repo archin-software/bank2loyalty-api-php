@@ -40,14 +40,16 @@ class GraphInfo
 
     /**
      * @param string $imageKey
+     * @return GraphInfo
      */
-    public function setImageKey(string $imageKey): void
+    public function setImageKey(string $imageKey): GraphInfo
     {
         $this->imageKey = $imageKey;
+        return $this;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
     public function getImageLabelText(): ?string
     {
@@ -55,11 +57,13 @@ class GraphInfo
     }
 
     /**
-     * @param string $imageLabelText
+     * @param string|null $imageLabelText
+     * @return GraphInfo
      */
-    public function setImageLabelText(?string $imageLabelText): void
+    public function setImageLabelText(?string $imageLabelText): GraphInfo
     {
         $this->imageLabelText = $imageLabelText;
+        return $this;
     }
 
     /**
@@ -72,10 +76,12 @@ class GraphInfo
 
     /**
      * @param string $buttonText
+     * @return GraphInfo
      */
-    public function setButtonText(string $buttonText): void
+    public function setButtonText(string $buttonText): GraphInfo
     {
         $this->buttonText = $buttonText;
+        return $this;
     }
 
     /**
@@ -88,9 +94,11 @@ class GraphInfo
 
     /**
      * @param ScriptAction $buttonAction
+     * @return GraphInfo
      */
-    public function setButtonAction(ScriptAction $buttonAction): void
+    public function setButtonAction(ScriptAction $buttonAction): GraphInfo
     {
         $this->buttonAction = $buttonAction;
+        return $this;
     }
 }
