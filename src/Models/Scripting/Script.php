@@ -11,7 +11,14 @@ class Script extends BaseModel
     protected ?string $customResponseId = null;
 
     /**
+     * Attribute can be set to initiate an onboarding sequence on the reader for the scanned data
+     * @var ScannedDataOnboarding|null
+     */
+    protected ?ScannedDataOnboarding $requestOnboarding = null;
+
+    /**
      * An array consisting of at least one scriptStep element
+     * - Not required if requestOnboarding is set.
      * @var ScriptStep[]
      */
     protected array $steps = [];
@@ -32,6 +39,22 @@ class Script extends BaseModel
     {
         $this->customResponseId = $customResponseId;
         return $this;
+    }
+
+    /**
+     * @return ScannedDataOnboarding|null
+     */
+    public function getRequestOnboarding(): ?ScannedDataOnboarding
+    {
+        return $this->requestOnboarding;
+    }
+
+    /**
+     * @param ScannedDataOnboarding|null $requestOnboarding
+     */
+    public function setRequestOnboarding(?ScannedDataOnboarding $requestOnboarding): void
+    {
+        $this->requestOnboarding = $requestOnboarding;
     }
 
     /**

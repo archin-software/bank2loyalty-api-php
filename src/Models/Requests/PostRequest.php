@@ -3,6 +3,7 @@
 namespace Bank2Loyalty\Models\Requests;
 
 use Bank2Loyalty\Models\Data\ConsumerData;
+use Bank2Loyalty\Models\Enums\IdentificationMeans;
 use Bank2Loyalty\Models\Enums\ScannedCodes;
 
 class PostRequest extends BaseRequest
@@ -55,6 +56,12 @@ class PostRequest extends BaseRequest
      * @var string
      */
     protected string $transactionNumber;
+
+    /**
+     * Means used for identification of the consumer
+     * @var IdentificationMeans
+     */
+    protected IdentificationMeans $identificationMeans;
 
     /**
      * OverrideMerchantId if set in portal, to allow to reflect your merchantId
@@ -415,5 +422,21 @@ class PostRequest extends BaseRequest
     {
         $this->cardIsoCountry = $cardIsoCountry;
         return $this;
+    }
+
+    /**
+     * @return IdentificationMeans
+     */
+    public function getIdentificationMeans(): IdentificationMeans
+    {
+        return $this->identificationMeans;
+    }
+
+    /**
+     * @param IdentificationMeans $identificationMeans
+     */
+    public function setIdentificationMeans(IdentificationMeans $identificationMeans): void
+    {
+        $this->identificationMeans = $identificationMeans;
     }
 }
