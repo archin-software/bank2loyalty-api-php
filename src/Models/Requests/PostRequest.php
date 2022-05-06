@@ -434,9 +434,11 @@ class PostRequest extends BaseRequest
 
     /**
      * @param IdentificationMeans $identificationMeans
+     * @return PostRequest
      */
-    public function setIdentificationMeans(IdentificationMeans $identificationMeans): void
+    public function setIdentificationMeans(IdentificationMeans $identificationMeans): PostRequest
     {
         $this->identificationMeans = $identificationMeans;
+        return $this;
     }
 }

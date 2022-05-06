@@ -18,6 +18,12 @@ class ScannedDataOnboarding extends BaseModel
     protected array $preferredLanguages = [];
 
     /**
+     * Some data you want to be transport to an onboarding url. This data can be passed by a query parameter in the url by the keyword "customData"
+     * @var string|null
+     */
+    protected ?string $customData = null;
+
+    /**
      * @return string
      */
     public function getIsoCountry(): string
@@ -27,10 +33,12 @@ class ScannedDataOnboarding extends BaseModel
 
     /**
      * @param string $isoCountry
+     * @return ScannedDataOnboarding
      */
-    public function setIsoCountry(string $isoCountry): void
+    public function setIsoCountry(string $isoCountry): ScannedDataOnboarding
     {
         $this->isoCountry = $isoCountry;
+        return $this;
     }
 
     /**
@@ -43,9 +51,29 @@ class ScannedDataOnboarding extends BaseModel
 
     /**
      * @param string[] $preferredLanguages
+     * @return ScannedDataOnboarding
      */
-    public function setPreferredLanguages(array $preferredLanguages): void
+    public function setPreferredLanguages(array $preferredLanguages): ScannedDataOnboarding
     {
         $this->preferredLanguages = $preferredLanguages;
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getCustomData(): ?string
+    {
+        return $this->customData;
+    }
+
+    /**
+     * @param string|null $customData
+     * @return ScannedDataOnboarding
+     */
+    public function setCustomData(?string $customData): ScannedDataOnboarding
+    {
+        $this->customData = $customData;
+        return $this;
     }
 }

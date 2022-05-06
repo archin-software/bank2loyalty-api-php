@@ -51,10 +51,12 @@ class Script extends BaseModel
 
     /**
      * @param ScannedDataOnboarding|null $requestOnboarding
+     * @return Script
      */
-    public function setRequestOnboarding(?ScannedDataOnboarding $requestOnboarding): void
+    public function setRequestOnboarding(?ScannedDataOnboarding $requestOnboarding): Script
     {
         $this->requestOnboarding = $requestOnboarding;
+        return $this;
     }
 
     /**
