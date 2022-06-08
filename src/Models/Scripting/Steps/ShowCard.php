@@ -63,6 +63,12 @@ class ShowCard extends BaseStep
     protected ?ScriptAction $buttonAction;
 
     /**
+     * ISO 639-2 language, overrides the reader language for showing the correct new label text
+     * @var string|null
+     */
+    protected ?string $language = null;
+
+    /**
      * @return string|null
      */
     public function getImageKey(): ?string
@@ -221,6 +227,24 @@ class ShowCard extends BaseStep
     public function setButtonAction(?ScriptAction $buttonAction): ShowCard
     {
         $this->buttonAction = $buttonAction;
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getLanguage(): ?string
+    {
+        return $this->language;
+    }
+
+    /**
+     * @param string|null $language
+     * @return ShowCard
+     */
+    public function setLanguage(?string $language): ShowCard
+    {
+        $this->language = $language;
         return $this;
     }
 }

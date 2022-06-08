@@ -25,6 +25,12 @@ class ShowYesNoQuestion extends BaseStep
     protected ScriptAction $yesAction;
 
     /**
+     * ISO 639-2 language, overrides the reader language for showing the correct new label text
+     * @var string|null
+     */
+    protected ?string $language = null;
+
+    /**
      * @return string
      */
     public function getQuestion(): string
@@ -75,6 +81,24 @@ class ShowYesNoQuestion extends BaseStep
     public function setYesAction(ScriptAction $yesAction): ShowYesNoQuestion
     {
         $this->yesAction = $yesAction;
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getLanguage(): ?string
+    {
+        return $this->language;
+    }
+
+    /**
+     * @param string|null $language
+     * @return ShowYesNoQuestion
+     */
+    public function setLanguage(?string $language): ShowYesNoQuestion
+    {
+        $this->language = $language;
         return $this;
     }
 }
