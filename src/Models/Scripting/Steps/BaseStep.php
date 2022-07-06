@@ -27,6 +27,12 @@ abstract class BaseStep extends BaseModel
     protected ?string $sendToPos = null;
 
     /**
+     * Send this string to the merchant device when screen is shown
+     * @var string|null
+     */
+    protected ?string $sendToMd = null;
+
+    /**
      * If consumer is known upsert or delete a cardnumber
      * @var CardNumberInfo|null
      */
@@ -83,6 +89,24 @@ abstract class BaseStep extends BaseModel
     public function setSendToPos(?string $sendToPos): BaseStep
     {
         $this->sendToPos = $sendToPos;
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getSendToMd(): ?string
+    {
+        return $this->sendToMd;
+    }
+
+    /**
+     * @param string|null $sendToMd
+     * @return BaseStep
+     */
+    public function setSendToMd(?string $sendToMd): BaseStep
+    {
+        $this->sendToMd = $sendToMd;
         return $this;
     }
 
