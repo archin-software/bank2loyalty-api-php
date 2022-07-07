@@ -11,6 +11,12 @@ class ScriptAction extends BaseModel
     protected ?string $sendToPos = null;
 
     /**
+     * Send this string to the merchant device when screen is shown
+     * @var string|null
+     */
+    protected ?string $sendToMd = null;
+
+    /**
      * Return the specified scriptActionResult data
      * @var ScriptActionResult|null
      */
@@ -43,6 +49,24 @@ class ScriptAction extends BaseModel
     public function setSendToPos(?string $sendToPos): ScriptAction
     {
         $this->sendToPos = $sendToPos;
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getSendToMd(): ?string
+    {
+        return $this->sendToMd;
+    }
+
+    /**
+     * @param string|null $sendToMd
+     * @return BaseStep
+     */
+    public function setSendToMd(?string $sendToMd): ScriptAction
+    {
+        $this->sendToMd = $sendToMd;
         return $this;
     }
 
