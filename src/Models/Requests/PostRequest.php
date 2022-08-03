@@ -3,6 +3,7 @@
 namespace Bank2Loyalty\Models\Requests;
 
 use Bank2Loyalty\Models\Data\ConsumerData;
+use Bank2Loyalty\Models\Data\GoogleSmartTapInfo;
 use Bank2Loyalty\Models\Enums\IdentificationMeans;
 use Bank2Loyalty\Models\Enums\ScannedCodes;
 
@@ -117,6 +118,12 @@ class PostRequest extends BaseRequest
      * @var string
      */
     protected string $cardIsoCountry;
+
+    /**
+     * google smartapInfo if availabe
+     * @var GoogleSmartTapInfo|null
+     */
+    protected ?GoogleSmartTapInfo $googleSmartTapInfo = null;
 
     /**
      * @return string
@@ -421,6 +428,24 @@ class PostRequest extends BaseRequest
     public function setCardIsoCountry(string $cardIsoCountry): PostRequest
     {
         $this->cardIsoCountry = $cardIsoCountry;
+        return $this;
+    }
+
+    /**
+     * @return GoogleSmartTapInfo|null
+     */
+    public function getGoogleSmartTapInfo(): ?GoogleSmartTapInfo
+    {
+        return $this->googleSmartTapInfo;
+    }
+
+    /**
+     * @param GoogleSmartTapInfo|null $googleSmartTapInfo
+     * @return PostRequest
+     */
+    public function setGoogleSmartTapInfo(?GoogleSmartTapInfo $googleSmartTapInfo): PostRequest
+    {
+        $this->googleSmartTapInfo = $googleSmartTapInfo;
         return $this;
     }
 

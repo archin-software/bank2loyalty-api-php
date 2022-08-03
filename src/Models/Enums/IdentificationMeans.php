@@ -25,6 +25,17 @@ class IdentificationMeans extends Enum
     public const ProgramScannedCode = 2;
 
     /**
+     * A google SmartTap nfc card has been used to identify a consumer
+     */
+    public const GoogleSmartTapNfcCard = 3;
+
+    /**
+     * A succesfull read of a google smarttap nfc enabled card has been performed
+     * No identification is done, the transacton only has GoogleSmartTapInfo data available. ConsumerId, MobieNumber, Consumer will not have a value.
+     */
+    public const NotIdentifiedGoogleSmartTapNfcCard = 98;
+
+    /**
      * No identification is done, the transaction only has scan information. ConsumerId, MobileNumber, Consumer, CardIsoCountry and CardLanguages will not have a value
      * only ScannedCode and ScannedData have valid data.
      */
