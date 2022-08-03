@@ -8,7 +8,7 @@ class GoogleSmartTapInfo
      * The collectorId of the retrieved (loyalty)card
      * @var int
      */
-    protected int $customResponseId;
+    protected int $collectorId;
 
     /**
      * base64 encoded binary data resprenting the card payload
@@ -19,18 +19,18 @@ class GoogleSmartTapInfo
     /**
      * @return int
      */
-    public function getCustomResponseId(): int
+    public function getCollectorId(): int
     {
-        return $this->customResponseId;
+        return $this->collectorId;
     }
 
     /**
-     * @param int $customResponseId
+     * @param int $collectorId
      * @return GoogleSmartTapInfo
      */
-    public function setCustomResponseId(int $customResponseId): GoogleSmartTapInfo
+    public function setCollectorId(int $collectorId): GoogleSmartTapInfo
     {
-        $this->customResponseId = $customResponseId;
+        $this->collectorId = $collectorId;
         return $this;
     }
 
