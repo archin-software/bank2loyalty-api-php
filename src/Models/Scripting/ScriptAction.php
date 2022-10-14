@@ -62,7 +62,7 @@ class ScriptAction extends BaseModel
 
     /**
      * @param string|null $sendToMd
-     * @return BaseStep
+     * @return ScriptAction
      */
     public function setSendToMd(?string $sendToMd): ScriptAction
     {

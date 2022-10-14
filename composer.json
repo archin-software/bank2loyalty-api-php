@@ -11,6 +11,6 @@
     },
     "require": {
         "ext-json": "*",
-        "elao/enum": "^1.14"
+        "elao/enum": "^1.17"
     }
 }

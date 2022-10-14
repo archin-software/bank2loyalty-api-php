@@ -4,8 +4,26 @@ namespace Bank2Loyalty\Models\Requests;
 
 use Bank2Loyalty\Models\Data\ConsumerData;
 
-class PostRemove extends BaseRequest
+class PostRemove extends BaseRequestV3
 {
+    /**
+     * Current version of request.
+     * @var int
+     */
+    protected int $protocolVersion;
+
+    /**
+     * ProgramId that is called, Guid format
+     * @var string
+     */
+    protected string $programId;
+
+    /**
+     * OverrideProgramId if set in portal, to allow identifying your program
+     * @var string|null
+     */
+    protected ?string $overrideProgramId = null;
+
     /**
      * Mobile number of identified consumer
      * @var string
@@ -75,6 +93,60 @@ class PostRemove extends BaseRequest
     public function setConsumerData(ConsumerData $consumerData): PostRemove
     {
         $this->consumerData = $consumerData;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getProtocolVersion(): int
+    {
+        return $this->protocolVersion;
+    }
+
+    /**
+     * @param int $protocolVersion
+     * @return PostRemove
+     */
+    public function setProtocolVersion(int $protocolVersion): PostRemove
+    {
+        $this->protocolVersion = $protocolVersion;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getProgramId(): string
+    {
+        return $this->programId;
+    }
+
+    /**
+     * @param string $programId
+     * @return PostRemove
+     */
+    public function setProgramId(string $programId): PostRemove
+    {
+        $this->programId = $programId;
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getOverrideProgramId(): ?string
+    {
+        return $this->overrideProgramId;
+    }
+
+    /**
+     * @param string|null $overrideProgramId
+     * @return PostRemove
+     */
+    public function setOverrideProgramId(?string $overrideProgramId): PostRemove
+    {
+        $this->overrideProgramId = $overrideProgramId;
         return $this;
     }
 }
