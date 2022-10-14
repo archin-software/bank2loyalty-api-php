@@ -4,7 +4,7 @@ namespace Bank2Loyalty\Models\Requests;
 
 use Bank2Loyalty\Models\Data\ConsumerData;
 
-class PostGetBalance extends BaseRequestV3
+class PostGetBalance
 {
     /**
      * Current version of request

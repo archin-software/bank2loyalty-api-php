@@ -5,7 +5,7 @@ namespace Bank2Loyalty\Models\Requests;
 use Bank2Loyalty\Models\Data\ShoppingCartItem;
 use Bank2Loyalty\Models\Enums\ScannedCodes;
 
-class PostPosTransaction extends BaseRequestV3
+class PostPosTransaction
 {
     /**
      * Current version of request

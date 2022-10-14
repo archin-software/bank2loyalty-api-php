@@ -19,7 +19,7 @@ class IdentificationMeansV3 extends Enum
      * A succesfull read of a google smarttap nfc enabled card has been performed.
      * No associated Bank2loyalty account found, GoogleSmartTapInfo is populated.
      */
-    public const constGoogleSmartTapNfcCard = 98;
+    public const GoogleSmartTapNfcCard = 98;
 
     /**
      * A succesfull scan with the scanner has been performed.

@@ -10,7 +10,7 @@ use Bank2Loyalty\Models\Data\ProgramScannedInfo;
 use Bank2Loyalty\Models\Data\ReaderInfo;
 use Bank2Loyalty\Models\Enums\IdentificationMeansV3;
 
-abstract class BaseRequestV3
+class RequestV3
 {
     /**
      * Means used for identification of the consumer.
@@ -65,9 +65,9 @@ abstract class BaseRequestV3
 
     /**
      * @param int $identificationMeansV3
-     * @return BaseRequestV3
+     * @return RequestV3
      */
-    public function setIdentificationMeansV3(int $identificationMeansV3): BaseRequestV3
+    public function setIdentificationMeansV3(int $identificationMeansV3): RequestV3
     {
         $this->identificationMeansV3 = $identificationMeansV3;
         return $this;
@@ -83,9 +83,9 @@ abstract class BaseRequestV3
 
     /**
      * @param ReaderInfo $readerInfo
-     * @return BaseRequestV3
+     * @return RequestV3
      */
-    public function setReaderInfo(ReaderInfo $readerInfo): BaseRequestV3
+    public function setReaderInfo(ReaderInfo $readerInfo): RequestV3
     {
         $this->readerInfo = $readerInfo;
         return $this;
@@ -101,9 +101,9 @@ abstract class BaseRequestV3
 
     /**
      * @param Bank2LoyaltyInfo|null $bank2LoyaltyInfo
-     * @return BaseRequestV3
+     * @return RequestV3
      */
-    public function setBank2LoyaltyInfo(?Bank2LoyaltyInfo $bank2LoyaltyInfo): BaseRequestV3
+    public function setBank2LoyaltyInfo(?Bank2LoyaltyInfo $bank2LoyaltyInfo): RequestV3
     {
         $this->bank2LoyaltyInfo = $bank2LoyaltyInfo;
         return $this;
@@ -119,9 +119,9 @@ abstract class BaseRequestV3
 
     /**
      * @param EmvInfo|null $emvInfo
-     * @return BaseRequestV3
+     * @return RequestV3
      */
-    public function setEmvInfo(?EmvInfo $emvInfo): BaseRequestV3
+    public function setEmvInfo(?EmvInfo $emvInfo): RequestV3
     {
         $this->emvInfo = $emvInfo;
         return $this;
@@ -137,9 +137,9 @@ abstract class BaseRequestV3
 
     /**
      * @param ProgramScannedInfo|null $programScannedInfo
-     * @return BaseRequestV3
+     * @return RequestV3
      */
-    public function setProgramScannedInfo(?ProgramScannedInfo $programScannedInfo): BaseRequestV3
+    public function setProgramScannedInfo(?ProgramScannedInfo $programScannedInfo): RequestV3
     {
         $this->programScannedInfo = $programScannedInfo;
         return $this;
@@ -155,9 +155,9 @@ abstract class BaseRequestV3
 
     /**
      * @param IdCardInfo|null $idCardInfo
-     * @return BaseRequestV3
+     * @return RequestV3
      */
-    public function setIdCardInfo(?IdCardInfo $idCardInfo): BaseRequestV3
+    public function setIdCardInfo(?IdCardInfo $idCardInfo): RequestV3
     {
         $this->idCardInfo = $idCardInfo;
         return $this;
@@ -173,9 +173,9 @@ abstract class BaseRequestV3
 
     /**
      * @param GoogleSmartTapInfo|null $googleSmartTapInfo
-     * @return BaseRequestV3
+     * @return RequestV3
      */
-    public function setGoogleSmartTapInfo(?GoogleSmartTapInfo $googleSmartTapInfo): BaseRequestV3
+    public function setGoogleSmartTapInfo(?GoogleSmartTapInfo $googleSmartTapInfo): RequestV3
     {
         $this->googleSmartTapInfo = $googleSmartTapInfo;
         return $this;

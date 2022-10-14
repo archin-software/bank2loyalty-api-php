@@ -20,9 +20,9 @@ class Bank2LoyaltyInfo
 
     /**
      * Last time the consumer updated data
-     * @var DateTime|null
+     * @var DateTime
      */
-    private ?DateTime $lastUpdateTimeUtc = null;
+    private DateTime $lastUpdateTimeUtc;
 
     /**
      * email address.
@@ -169,18 +169,18 @@ class Bank2LoyaltyInfo
     }
 
     /**
-     * @return DateTime|null
+     * @return DateTime
      */
-    public function getLastUpdateTimeUtc(): ?DateTime
+    public function getLastUpdateTimeUtc(): DateTime
     {
         return $this->lastUpdateTimeUtc;
     }
 
     /**
-     * @param DateTime|null $lastUpdateTimeUtc
+     * @param DateTime $lastUpdateTimeUtc
      * @return Bank2LoyaltyInfo
      */
-    public function setLastUpdateTimeUtc(?DateTime $lastUpdateTimeUtc): Bank2LoyaltyInfo
+    public function setLastUpdateTimeUtc(DateTime $lastUpdateTimeUtc): Bank2LoyaltyInfo
     {
         $this->lastUpdateTimeUtc = $lastUpdateTimeUtc;
         return $this;

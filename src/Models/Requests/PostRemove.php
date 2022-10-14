@@ -4,7 +4,7 @@ namespace Bank2Loyalty\Models\Requests;
 
 use Bank2Loyalty\Models\Data\ConsumerData;
 
-class PostRemove extends BaseRequestV3
+class PostRemove
 {
     /**
      * Current version of request.

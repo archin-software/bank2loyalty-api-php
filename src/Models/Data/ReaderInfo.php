@@ -9,6 +9,7 @@ class ReaderInfo
      * @var int
      */
     private int $protocolVersion;
+
     /**
      * MerchantId of reader, Guid format.
      * @var string
