@@ -5,8 +5,14 @@ namespace Bank2Loyalty\Models\Requests;
 use Bank2Loyalty\Models\Data\ShoppingCartItem;
 use Bank2Loyalty\Models\Enums\ScannedCodes;
 
-class PostPosTransaction extends BaseRequest
+class PostPosTransaction
 {
+    /**
+     * Current version of request
+     * @var int
+     */
+    protected int $protocolVersion;
+
     /**
      * MerchantId of reader, Guid format
      * @var string
@@ -42,6 +48,18 @@ class PostPosTransaction extends BaseRequest
      * @var string
      */
     protected string $cashRegister;
+
+    /**
+     * ProgramId that is called, Guid format
+     * @var string
+     */
+    protected string $programId;
+
+    /**
+     * OverrideProgramId if set in portal, to allow identifying your program
+     * @var string|null
+     */
+    protected ?string $overrideProgramId = null;
 
     /**
      * OverrideMerchantId if set in portal, to allow to reflect your merchantId
@@ -413,6 +431,60 @@ class PostPosTransaction extends BaseRequest
     public function setShoppingCartItems(array $shoppingCartItems): PostPosTransaction
     {
         $this->shoppingCartItems = $shoppingCartItems;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getProtocolVersion(): int
+    {
+        return $this->protocolVersion;
+    }
+
+    /**
+     * @param int $protocolVersion
+     * @return PostPosTransaction
+     */
+    public function setProtocolVersion(int $protocolVersion): PostPosTransaction
+    {
+        $this->protocolVersion = $protocolVersion;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getProgramId(): string
+    {
+        return $this->programId;
+    }
+
+    /**
+     * @param string $programId
+     * @return PostPosTransaction
+     */
+    public function setProgramId(string $programId): PostPosTransaction
+    {
+        $this->programId = $programId;
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getOverrideProgramId(): ?string
+    {
+        return $this->overrideProgramId;
+    }
+
+    /**
+     * @param string|null $overrideProgramId
+     * @return PostPosTransaction
+     */
+    public function setOverrideProgramId(?string $overrideProgramId): PostPosTransaction
+    {
+        $this->overrideProgramId = $overrideProgramId;
         return $this;
     }
 }

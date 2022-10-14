@@ -4,8 +4,14 @@ namespace Bank2Loyalty\Models\Requests;
 
 use Bank2Loyalty\Models\Data\ConsumerData;
 
-class PostGetBalance extends BaseRequest
+class PostGetBalance
 {
+    /**
+     * Current version of request
+     * @var int
+     */
+    protected int $protocolVersion;
+
     /**
      * TimeZoneId of consumer
      * @var string
@@ -23,6 +29,18 @@ class PostGetBalance extends BaseRequest
      * @var string
      */
     protected string $isoCountry;
+
+    /**
+     * ProgramId that is called, Guid format
+     * @var string
+     */
+    protected string $programId;
+
+    /**
+     * OverrideProgramId if set in portal, to allow identifying your program
+     * @var string|null
+     */
+    protected ?string $overrideProgramId = null;
 
     /**
      * Mobile number of identified consumer
@@ -171,6 +189,60 @@ class PostGetBalance extends BaseRequest
     public function setCardNumber(string $cardNumber): PostGetBalance
     {
         $this->cardNumber = $cardNumber;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getProtocolVersion(): int
+    {
+        return $this->protocolVersion;
+    }
+
+    /**
+     * @param int $protocolVersion
+     * @return PostGetBalance
+     */
+    public function setProtocolVersion(int $protocolVersion): PostGetBalance
+    {
+        $this->protocolVersion = $protocolVersion;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getProgramId(): string
+    {
+        return $this->programId;
+    }
+
+    /**
+     * @param string $programId
+     * @return PostGetBalance
+     */
+    public function setProgramId(string $programId): PostGetBalance
+    {
+        $this->programId = $programId;
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getOverrideProgramId(): ?string
+    {
+        return $this->overrideProgramId;
+    }
+
+    /**
+     * @param string|null $overrideProgramId
+     * @return PostGetBalance
+     */
+    public function setOverrideProgramId(?string $overrideProgramId): PostGetBalance
+    {
+        $this->overrideProgramId = $overrideProgramId;
         return $this;
     }
 }

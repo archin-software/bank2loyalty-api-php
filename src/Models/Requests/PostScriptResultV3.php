@@ -4,7 +4,7 @@ namespace Bank2Loyalty\Models\Requests;
 
 use Bank2Loyalty\Models\Scripting\ScriptActionResults;
 
-class PostScriptResult extends PostRequest
+class PostScriptResultV3 extends RequestV3
 {
     /**
      * Script action results from script processing
@@ -22,9 +22,9 @@ class PostScriptResult extends PostRequest
 
     /**
      * @param ScriptActionResults $scriptActionResults
-     * @return PostScriptResult
+     * @return PostScriptResultV3
      */
-    public function setScriptActionResults(ScriptActionResults $scriptActionResults): PostScriptResult
+    public function setScriptActionResults(ScriptActionResults $scriptActionResults): PostScriptResultV3
     {
         $this->scriptActionResults = $scriptActionResults;
         return $this;
