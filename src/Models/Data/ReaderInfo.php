@@ -35,6 +35,12 @@ class ReaderInfo
     private string $language;
 
     /**
+     * Language (2 chars) the merchant device is operating in. for example "nl" or "de"
+     * @var string
+     */
+    private string $merchantDeviceLanguage;
+
+    /**
      * isoCountry (iso-3166 alpha-2 code) the reader is located in.
      * @var string
      */
@@ -163,6 +169,24 @@ class ReaderInfo
     public function setLanguage(string $language): ReaderInfo
     {
         $this->language = $language;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMerchantDeviceLanguage(): string
+    {
+        return $this->merchantDeviceLanguage;
+    }
+
+    /**
+     * @param string $merchantDeviceLanguage
+     * @return ReaderInfo
+     */
+    public function setMerchantDeviceLanguage(string $merchantDeviceLanguage): ReaderInfo
+    {
+        $this->merchantDeviceLanguage = $merchantDeviceLanguage;
         return $this;
     }
 
