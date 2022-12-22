@@ -24,4 +24,5 @@ class ScannedCodes extends Enum
     public const Qr = 12;
     public const DataMatrix = 13;
     public const PDF417 = 14;
+    public const MagneticStripe = 15;
 }
